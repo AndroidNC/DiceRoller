@@ -9,12 +9,16 @@ import android.widget.Toast
 import java.util.*
 
 class MainActivity : AppCompatActivity() {
+    lateinit var diceImage: ImageView
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
         val rollButton: Button = findViewById(R.id.roll_button)
         rollButton.text = "Let's Roll"
+
+        diceImage = findViewById(R.id.dice_image)
 
         rollButton.setOnClickListener {
             rollDice()
@@ -23,8 +27,6 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun rollDice() {
-        var rollImage: ImageView = findViewById(R.id.dice_image)
-
         val randomInt = Random().nextInt(6) + 1
 
         val drawableResource = when (randomInt) {
@@ -36,7 +38,7 @@ class MainActivity : AppCompatActivity() {
             else -> R.drawable.dice_6
         }
 
-        rollImage.setImageResource(drawableResource)
+        diceImage.setImageResource(drawableResource)
 
     }
 }
