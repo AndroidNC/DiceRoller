@@ -78,7 +78,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:src="@drawable/empty_dice"
+                app:srcCompat ="@drawable/empty_dice"
                 tools:src="@drawable/dice_3" />
 
             <ImageView
@@ -86,8 +86,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:src="@drawable/empty_dice"
-                tools:src="@drawable/dice_3" />
+                app:srcCompat="@drawable/empty_dice"
+                tools:src="@drawable/dice_4" />
         </LinearLayout>
 
         <Button
